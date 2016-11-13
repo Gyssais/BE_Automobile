@@ -4,11 +4,13 @@
 #include "config.h"
 #include "SBC.h"
 #include "Mode_manager.h"
-#include "Comodo.h"
-#include "Driver_phare.h"
+#include "Comodo.h" // à supprimer
+#include "Driver_phare.h" // à supprimer
 #include "MPC5604B_LED.h"
 #include "BCM_appli.h"
-#include "LCM_appli.h"
+#include "LCM_appli.h" // à supprimer
+
+#include "DCM_appli.h"
 
 
 

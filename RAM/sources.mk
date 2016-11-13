@@ -86,6 +86,8 @@ C_DEPS_QUOTED :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-Sources \
+Sources/service \
+Sources/driver \
+Sources/application \
 Project_Settings/Startup_Code \
 
