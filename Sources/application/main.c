@@ -8,7 +8,7 @@
 #include "BCM_appli.h"
 #include "DCM_appli.h"
 
-
+#define AD1 1
 
 /*************** Private function prototype **********/
 
@@ -16,7 +16,6 @@
 
  int main(void) {
 
-				
 }
 
 

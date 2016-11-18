@@ -5,7 +5,7 @@
 ################################################################################
 
 export GNU_Make_Install_DirEnv=$(CWInstallLocationEnv)/gnu/bin
-export ProjDirPath=C:/Users/Julien/Documents/INSA/5A/BE elec automobile/rapports_codes_sources_2015-2016/BE_Elec_Auto_2015
-export CWInstallLocationEnv=C:/Freescale/CW MCU v10.7
+export ProjDirPath=D:/GitHub/BE_Automobile
+export CWInstallLocationEnv=D:/Freescale/CW MCU v10.7
 export MCUToolsBaseDirEnv=$(CWInstallLocationEnv)/MCU
 export PAToolsDirEnv=$(CWInstallLocationEnv)/MCU/PA_Tools/Command_Line_Tools

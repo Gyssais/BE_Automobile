@@ -8,6 +8,7 @@
 C_SRCS_QUOTED += \
 "../Sources/driver/Exceptions.c" \
 "../Sources/driver/IntcInterrupts.c" \
+"../Sources/driver/adc.c" \
 "../Sources/driver/ivor_branch_table.c" \
 "../Sources/driver/mc33984_drv.c" \
 "../Sources/driver/spi_drv.c" \
@@ -15,6 +16,7 @@ C_SRCS_QUOTED += \
 C_SRCS += \
 ../Sources/driver/Exceptions.c \
 ../Sources/driver/IntcInterrupts.c \
+../Sources/driver/adc.c \
 ../Sources/driver/ivor_branch_table.c \
 ../Sources/driver/mc33984_drv.c \
 ../Sources/driver/spi_drv.c \
@@ -22,6 +24,7 @@ C_SRCS += \
 OBJS += \
 ./Sources/driver/Exceptions_c.obj \
 ./Sources/driver/IntcInterrupts_c.obj \
+./Sources/driver/adc_c.obj \
 ./Sources/driver/ivor_branch_table_c.obj \
 ./Sources/driver/mc33984_drv_c.obj \
 ./Sources/driver/spi_drv_c.obj \
@@ -29,6 +32,7 @@ OBJS += \
 OBJS_QUOTED += \
 "./Sources/driver/Exceptions_c.obj" \
 "./Sources/driver/IntcInterrupts_c.obj" \
+"./Sources/driver/adc_c.obj" \
 "./Sources/driver/ivor_branch_table_c.obj" \
 "./Sources/driver/mc33984_drv_c.obj" \
 "./Sources/driver/spi_drv_c.obj" \
@@ -36,6 +40,7 @@ OBJS_QUOTED += \
 C_DEPS += \
 ./Sources/driver/Exceptions_c.d \
 ./Sources/driver/IntcInterrupts_c.d \
+./Sources/driver/adc_c.d \
 ./Sources/driver/ivor_branch_table_c.d \
 ./Sources/driver/mc33984_drv_c.d \
 ./Sources/driver/spi_drv_c.d \
@@ -43,6 +48,7 @@ C_DEPS += \
 OBJS_OS_FORMAT += \
 ./Sources/driver/Exceptions_c.obj \
 ./Sources/driver/IntcInterrupts_c.obj \
+./Sources/driver/adc_c.obj \
 ./Sources/driver/ivor_branch_table_c.obj \
 ./Sources/driver/mc33984_drv_c.obj \
 ./Sources/driver/spi_drv_c.obj \
@@ -50,6 +56,7 @@ OBJS_OS_FORMAT += \
 C_DEPS_QUOTED += \
 "./Sources/driver/Exceptions_c.d" \
 "./Sources/driver/IntcInterrupts_c.d" \
+"./Sources/driver/adc_c.d" \
 "./Sources/driver/ivor_branch_table_c.d" \
 "./Sources/driver/mc33984_drv_c.d" \
 "./Sources/driver/spi_drv_c.d" \
@@ -77,9 +84,17 @@ Sources/driver/IntcInterrupts_c.obj: ../Sources/driver/IntcInterrupts.c
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Sources/driver/ivor_branch_table_c.obj: ../Sources/driver/ivor_branch_table.c
+Sources/driver/adc_c.obj: ../Sources/driver/adc.c
 	@echo 'Building file: $<'
 	@echo 'Executing target #8 $<'
+	@echo 'Invoking: PowerPC Compiler'
+	"$(PAToolsDirEnv)/mwcceppc" @@"Sources/driver/adc.args" -o "Sources/driver/adc_c.obj" "$<" -MD -gccdep
+	@echo 'Finished building: $<'
+	@echo ' '
+
+Sources/driver/ivor_branch_table_c.obj: ../Sources/driver/ivor_branch_table.c
+	@echo 'Building file: $<'
+	@echo 'Executing target #9 $<'
 	@echo 'Invoking: PowerPC Compiler'
 	"$(PAToolsDirEnv)/mwcceppc" @@"Sources/driver/ivor_branch_table.args" -o "Sources/driver/ivor_branch_table_c.obj" "$<" -MD -gccdep
 	@echo 'Finished building: $<'
@@ -87,7 +102,7 @@ Sources/driver/ivor_branch_table_c.obj: ../Sources/driver/ivor_branch_table.c
 
 Sources/driver/mc33984_drv_c.obj: ../Sources/driver/mc33984_drv.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #9 $<'
+	@echo 'Executing target #10 $<'
 	@echo 'Invoking: PowerPC Compiler'
 	"$(PAToolsDirEnv)/mwcceppc" @@"Sources/driver/mc33984_drv.args" -o "Sources/driver/mc33984_drv_c.obj" "$<" -MD -gccdep
 	@echo 'Finished building: $<'
@@ -95,7 +110,7 @@ Sources/driver/mc33984_drv_c.obj: ../Sources/driver/mc33984_drv.c
 
 Sources/driver/spi_drv_c.obj: ../Sources/driver/spi_drv.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #10 $<'
+	@echo 'Executing target #11 $<'
 	@echo 'Invoking: PowerPC Compiler'
 	"$(PAToolsDirEnv)/mwcceppc" @@"Sources/driver/spi_drv.args" -o "Sources/driver/spi_drv_c.obj" "$<" -MD -gccdep
 	@echo 'Finished building: $<'
