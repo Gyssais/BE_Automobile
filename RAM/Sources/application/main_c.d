@@ -19,4 +19,6 @@ Sources/application/main_c.obj: D:\GitHub\BE_Automobile\Sources\application\main
 	D:\GitHub\BE_Automobile\Project_Headers\Mode_manager.h \
 	D:\GitHub\BE_Automobile\Project_Headers\MPC5604B_LED.h \
 	D:\GitHub\BE_Automobile\Project_Headers\BCM_appli.h \
-	D:\GitHub\BE_Automobile\Project_Headers\DCM_appli.h 
+	D:\GitHub\BE_Automobile\Project_Headers\DCM_appli.h \
+	D:\GitHub\BE_Automobile\Project_Headers\pin.h \
+	D:\GitHub\BE_Automobile\Project_Headers\adc.h 

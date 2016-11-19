@@ -7,14 +7,33 @@
 #include "MPC5604B_LED.h"
 #include "BCM_appli.h"
 #include "DCM_appli.h"
+#include "pin.h"
+#include "adc.h"
 
-#define AD1 1
+#define AD_PIN PB_4
 
 /*************** Private function prototype **********/
 
 //************** Public function *************/
 
+
+// configure the adc, configure the pin AD_PIN for analog input, and perform continuously a software triggered conversion.
+void adc_example()
+{
+	int result;
+	
+	result = setupAdc();
+	result =  setupPin(AD_PIN);
+	enableADC();
+	
+	while(1)
+	{
+		result = analogRead(AD_PIN);
+	}
+}
+
  int main(void) {
+
 
 }
 
