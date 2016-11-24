@@ -9,8 +9,9 @@
 #include "DCM_appli.h"
 #include "pin.h"
 #include "adc.h"
+#include "define.h"
 
-#define AD_PIN PB_4
+
 
 /*************** Private function prototype **********/
 
