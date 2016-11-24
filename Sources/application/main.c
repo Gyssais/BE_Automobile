@@ -35,6 +35,7 @@ void adc_example()
 
  int main(void) {
 
+	 adc_example(); // To test
 
 }
 
