@@ -15,6 +15,8 @@
 
 //global variable
 
+//struct _SPI_DRV SPI[];
+
 uint8_t get_flag_frame_received(void){
 	return 0;
 }
