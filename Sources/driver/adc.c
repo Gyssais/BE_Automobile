@@ -83,12 +83,13 @@ void enableADC()
 
 void startConversion()
 {
-	ADC.MSR.B.NSTART =1;
+	ADC.MCR.B.NSTART =1;
 	
 }
 
 int setupPin(int pin)
 {
+	
 	if(ADC.MSR.B.ADCSTATUS !=1) // if not in power-down mode
 		{
 			ADC.MCR.B.PWDN = 1; // request power-down mode. needed before configuring the ADC.
@@ -100,13 +101,13 @@ int setupPin(int pin)
 	  // enable channel corresponding to the pin for normal conversion.
 	  
 	  // precision channel
-	  if(pin >= PB_4 && pin <=PB_7)  ADC.NCMR[0].R |= (1<<(-pin+51));  
-	  else if (pin >= PD_0 && pin <=PD_11) ADC.NCMR[0].R |= (1<<(-pin+75)); 
+	  if(pin >= PB_4 && pin <=PB_7)  ADC.NCMR[0].R  |= (1<<(pin-PB_4)); 
+	  else if (pin >= PD_0 && pin <=PD_11) ADC.NCMR[0].R |= (1<<(pin-PD_0)); 
 	  
 	  // normal channel
-	  else if(pin >= PB_8 && pin <=PB_11) ADC.NCMR[1].R |= (1<<(-pin+55));
-	  else if (pin >= PD_12 && pin <=PD_15) ADC.NCMR[1].R |= (1<<(-pin+91));
-	  else if (pin >= PF_0 && pin <=PF_7) ADC.NCMR[1].R |= (1<<(-pin+111));
+	  else if(pin >= PB_8 && pin <=PB_11) ADC.NCMR[1].R |= (1<<(pin-PB_8));
+	  else if (pin >= PD_12 && pin <=PD_15) ADC.NCMR[1].R |= (1<<(pin-PD_12));
+	  else if (pin >= PF_0 && pin <=PF_7) ADC.NCMR[1].R |= (1<<(pin-PF_0));
 	
 	  else return -1;
 	  
@@ -120,10 +121,10 @@ int analogRead(int pin)
 	char channel_type;
 	 
 	if(pinToAdcChannel(pin,&channel, &channel_type) !=0 ) return -1; // check if the pin corresponds to a valid channel
-	if(!(ADC.NCMR[channel_type].R & channel))  return -2; // check if the channel is enabled in the NCMR register.
+	if(!(ADC.NCMR[channel_type].R & (1<<channel)))  return -2; // check if the channel is enabled in the NCMR register.
 	
 	
-	startConversion();
+	ADC.MCR.B.NSTART =1;
 	while(ADC.MSR.B.NSTART ==1) {} // wait the conversion to be completed
 	
 	if(channel_type ==1) channel +=32; // translate channel for standard channel
