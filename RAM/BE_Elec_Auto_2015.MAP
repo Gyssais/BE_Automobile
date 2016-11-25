@@ -100,15 +100,34 @@ Link map of __startup
     3] .init (section,local) found in MPC5604B_Startup_c.obj 
     3] .init.21 (notype,local) found in MPC5604B_Startup_c.obj 
     3] .text (section,local) found in main_c.obj 
+<<<<<<< HEAD
     3] .text.243 (notype,local) found in main_c.obj 
     3] .text (section,local) found in spi_drv_c.obj 
     3] .text.1007 (notype,local) found in spi_drv_c.obj 
     3] .text (section,local) found in mc33984_drv_c.obj 
     3] .text.513 (notype,local) found in mc33984_drv_c.obj 
+=======
+<<<<<<< HEAD
+    3] .text.160 (notype,local) found in main_c.obj 
+=======
+<<<<<<< HEAD
+    3] .text.33 (notype,local) found in main_c.obj 
+>>>>>>> 9167fc6830c37823bf85d63f2c9ccd0ba21449a7
     3] .ivor_branch_table (section,local) found in ivor_branch_table_c.obj 
     3] .ivor_branch_table.24 (notype,local) found in ivor_branch_table_c.obj 
     3] .text (section,local) found in Mode_manager_c.obj 
     3] .text.94 (notype,local) found in Mode_manager_c.obj 
+<<<<<<< HEAD
+=======
+=======
+    3] .text.34 (notype,local) found in main_c.obj 
+>>>>>>> a293cccb54267cb992a957b8c7321e8dfbd86d11
+    3] .ivor_branch_table (section,local) found in ivor_branch_table_c.obj 
+    3] .ivor_branch_table.24 (notype,local) found in ivor_branch_table_c.obj 
+    3] .text (section,local) found in adc_c.obj 
+    3] .text.111 (notype,local) found in adc_c.obj 
+>>>>>>> 1c5b992d6b90bff314774a809094c1a30576de73
+>>>>>>> 9167fc6830c37823bf85d63f2c9ccd0ba21449a7
     3] .text (section,local) found in libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
     3] .text.86 (notype,local) found in libc_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_C\EWL_C.PA_CmdLineData\libc_E200z0_VLE_Soft\obj\abort_exit.o
     3] .init (section,local) found in librt_E200z0_VLE_Soft.a D:\w\EPPC\workspace_codegen\ewl\EWL_Runtime\Runtime_PA_CmdLineData\librt_E200z0_VLE_Soft\obj\__start.o
@@ -200,6 +219,7 @@ Link map of __startup
   00000052 000000 40001392 00000602  1 .text 	MPC5604B_HWInit_c.obj 
   UNUSED   000050 ........ ........    INIT_Derivative MPC5604B_HWInit_c.obj 
   UNUSED   000002 ........ ........    INIT_ExternalBusAndMemory MPC5604B_HWInit_c.obj 
+<<<<<<< HEAD
   00000052 000000 40001392 00000602  1 .text.12 	MPC5604B_HWInit_c.obj 
   00000052 00006c 40001392 00000602  1 .text 	main_c.obj 
   00000052 00006c 40001392 00000602  2 main 	main_c.obj 
@@ -250,6 +270,66 @@ Link map of __startup
   00000cce 000124 4000200e 0000127e  2 _spi_drv_write 	spi_drv_c.obj 
   00000df2 000124 40002132 000013a2  2 _spi_drv_write_p 	spi_drv_c.obj 
   00000f16 00015a 40002256 000014c6  2 _spi_drv_read 	spi_drv_c.obj 
+=======
+  00000052 000000 40001382 000005b2  1 .text.12 	MPC5604B_HWInit_c.obj 
+<<<<<<< HEAD
+  00000052 0000ce 40001382 000005b2  1 .text 	main_c.obj 
+  00000052 0000ce 40001382 000005b2  2 main 	main_c.obj 
+  00000120 000000 40001450 00000680  1 .text.33 	main_c.obj 
+  00000120 000000 40001450 00000680  1 .text 	spi_drv_c.obj 
+=======
+  00000052 000042 40001382 000005b2  1 .text 	main_c.obj 
+  00000052 000030 40001382 000005b2  2 adc_example 	main_c.obj 
+  00000082 000012 400013b2 000005e2  2 main 	main_c.obj 
+  00000094 000000 400013c4 000005f4  1 .text.160 	main_c.obj 
+  00000094 000000 400013c4 000005f4  1 .text 	spi_drv_c.obj 
+>>>>>>> 1c5b992d6b90bff314774a809094c1a30576de73
+  UNUSED   000026 ........ ........    _spi_drv_init_dspi0 spi_drv_c.obj 
+  UNUSED   000020 ........ ........    _spi_drv_exchange_dspi0 spi_drv_c.obj 
+  UNUSED   00001c ........ ........    _spi_drv_write_dspi0 spi_drv_c.obj 
+  UNUSED   00001c ........ ........    _spi_drv_write_p_dspi0 spi_drv_c.obj 
+  UNUSED   00001c ........ ........    _spi_drv_read_dspi0 spi_drv_c.obj 
+  UNUSED   00001c ........ ........    _spi_drv_read_p_dspi0 spi_drv_c.obj 
+  UNUSED   00002a ........ ........    _spi_drv_show_dspi0 spi_drv_c.obj 
+  UNUSED   000034 ........ ........    _spi_drv_exchange_array_dspi0 spi_drv_c.obj 
+  UNUSED   000030 ........ ........    _spi_drv_write_array_dspi0 spi_drv_c.obj 
+  UNUSED   000030 ........ ........    _spi_drv_read_array_dspi0 spi_drv_c.obj 
+  UNUSED   000030 ........ ........    _spi_drv_listen_dspi0 spi_drv_c.obj 
+  UNUSED   00002a ........ ........    _spi_drv_listen_till_dspi0 spi_drv_c.obj 
+  UNUSED   000030 ........ ........    _spi_drv_show_array_dspi0 spi_drv_c.obj 
+  UNUSED   000018 ........ ........    _spi_drv_tci_dspi0 spi_drv_c.obj 
+  UNUSED   000026 ........ ........    _spi_drv_init_dspi1 spi_drv_c.obj 
+  UNUSED   000020 ........ ........    _spi_drv_exchange_dspi1 spi_drv_c.obj 
+  UNUSED   00001c ........ ........    _spi_drv_write_dspi1 spi_drv_c.obj 
+  UNUSED   00001c ........ ........    _spi_drv_read_dspi1 spi_drv_c.obj 
+  UNUSED   00002a ........ ........    _spi_drv_show_dspi1 spi_drv_c.obj 
+  UNUSED   000034 ........ ........    _spi_drv_exchange_array_dspi1 spi_drv_c.obj 
+  UNUSED   000030 ........ ........    _spi_drv_write_array_dspi1 spi_drv_c.obj 
+  UNUSED   000030 ........ ........    _spi_drv_read_array_dspi1 spi_drv_c.obj 
+  UNUSED   000030 ........ ........    _spi_drv_listen_dspi1 spi_drv_c.obj 
+  UNUSED   00002a ........ ........    _spi_drv_listen_till_dspi1 spi_drv_c.obj 
+  UNUSED   000030 ........ ........    _spi_drv_show_array_dspi1 spi_drv_c.obj 
+  UNUSED   000018 ........ ........    _spi_drv_tci_dspi1 spi_drv_c.obj 
+  UNUSED   000026 ........ ........    _spi_drv_init_dspi2 spi_drv_c.obj 
+  UNUSED   000020 ........ ........    _spi_drv_exchange_dspi2 spi_drv_c.obj 
+  UNUSED   00001c ........ ........    _spi_drv_write_dspi2 spi_drv_c.obj 
+  UNUSED   00001c ........ ........    _spi_drv_read_dspi2 spi_drv_c.obj 
+  UNUSED   00002a ........ ........    _spi_drv_show_dspi2 spi_drv_c.obj 
+  UNUSED   000034 ........ ........    _spi_drv_exchange_array_dspi2 spi_drv_c.obj 
+  UNUSED   000030 ........ ........    _spi_drv_write_array_dspi2 spi_drv_c.obj 
+  UNUSED   000030 ........ ........    _spi_drv_read_array_dspi2 spi_drv_c.obj 
+  UNUSED   000030 ........ ........    _spi_drv_listen_dspi2 spi_drv_c.obj 
+  UNUSED   00002a ........ ........    _spi_drv_listen_till_dspi2 spi_drv_c.obj 
+  UNUSED   000030 ........ ........    _spi_drv_show_array_dspi2 spi_drv_c.obj 
+  UNUSED   000018 ........ ........    _spi_drv_tci_dspi2 spi_drv_c.obj 
+  UNUSED   0001ca ........ ........    _spi_drv_set_masterslave spi_drv_c.obj 
+  UNUSED   000132 ........ ........    _spi_drv_clr_flags spi_drv_c.obj 
+  UNUSED   0001cc ........ ........    _spi_drv_init spi_drv_c.obj 
+  UNUSED   000176 ........ ........    _spi_drv_exchange spi_drv_c.obj 
+  UNUSED   000124 ........ ........    _spi_drv_write spi_drv_c.obj 
+  UNUSED   000124 ........ ........    _spi_drv_write_p spi_drv_c.obj 
+  UNUSED   00015a ........ ........    _spi_drv_read spi_drv_c.obj 
+>>>>>>> 9167fc6830c37823bf85d63f2c9ccd0ba21449a7
   UNUSED   00015a ........ ........    _spi_drv_read_p spi_drv_c.obj 
   00001070 000352 400023b0 00001620  2 _spi_drv_exchange_array 	spi_drv_c.obj 
   000013c2 000292 40002702 00001972  2 _spi_drv_write_array 	spi_drv_c.obj 
@@ -531,6 +611,7 @@ extabindex section layout
 Memory map:
                        Starting Size     File       S-Record
                        address           Offset     Line
+<<<<<<< HEAD
     .ivor_branch_table 40000000 000000f4 00000180          2
   .intc_hw_branch_table 400000f4 00000000 00000274          0
                  .init 40001000 00000080 00000274         15
@@ -556,6 +637,61 @@ Memory map:
            .debug_line          0000350b 0000777f
             .debug_loc          00001636 0000ac8a
        .debug_pubnames          0000090f 0000c2c0
+=======
+    .ivor_branch_table 40000000 000000f4 00000140          2
+  .intc_hw_branch_table 400000f4 00000000 00000234          0
+                 .init 40001000 0000006c 00000234         15
+             .init_vle 4000106c 00000208 000002a0         21
+  .__exception_handlers 40001280 000000a4 000004b0         47
+                 .text 40001324 00000000 00000560          0
+<<<<<<< HEAD
+             .text_vle 40001330 0000049c 00000560         56
+               .rodata 400017d0 0000000c 00000a00        115
+                .ctors 400017dc 00000000 00000a0c          0
+                .dtors 400017dc 00000000 00000a0c          0
+                 extab 400017dc 00000000 00000a0c          0
+            extabindex 400017dc 00000000 00000a0c          0
+  .__uninitialized_intc_handlertable 400017e0 00000348 00000a10          0
+                 .data 40001b28 00000000 00000a10          0
+                .sdata 40001b28 00000000 00000a10          0
+                 .sbss 40001b28 0000000c 00000a10          0
+               .sdata2 40001b34 00000000 00000a10          0
+                .sbss2 40001b34 00000000 00000a10          0
+                  .bss 40001b34 00000000 00000a10          0
+      .PPC.EMB.apuinfo 000053ec 00000000 00005e00          0
+         .debug_abbrev          0000015d 00000a10
+           .debug_info          000017e9 00000b6d
+           .debug_line          000029c1 00002356
+            .debug_loc          0000038c 00004d17
+       .debug_pubnames          00000358 000050a3
+=======
+             .text_vle 40001330 0000043c 00000560         56
+               .rodata 40001770 0000000c 000009a0        111
+                .ctors 4000177c 00000000 000009ac          0
+                .dtors 4000177c 00000000 000009ac          0
+                 extab 4000177c 00000000 000009ac          0
+            extabindex 4000177c 00000000 000009ac          0
+  .__uninitialized_intc_handlertable 40001780 00000348 000009b0          0
+                 .data 40001ac8 00000000 000009b0          0
+                .sdata 40001ac8 00000000 000009b0          0
+                 .sbss 40001ac8 0000000c 000009b0          0
+               .sdata2 40001ad4 00000000 000009b0          0
+                .sbss2 40001ad4 00000000 000009b0          0
+                  .bss 40001ad4 00000000 000009b0          0
+      .PPC.EMB.apuinfo 00005658 00000000 00006010          0
+         .debug_abbrev          0000015d 000009b0
+           .debug_info          000018e7 00000b0d
+<<<<<<< HEAD
+           .debug_line          00002a2d 000023f4
+            .debug_loc          000003f7 00004e21
+       .debug_pubnames          0000038f 00005218
+=======
+           .debug_line          000029d2 000023f4
+            .debug_loc          000003f7 00004dc6
+       .debug_pubnames          0000038f 000051bd
+>>>>>>> 1c5b992d6b90bff314774a809094c1a30576de73
+>>>>>>> a293cccb54267cb992a957b8c7321e8dfbd86d11
+>>>>>>> 9167fc6830c37823bf85d63f2c9ccd0ba21449a7
 
 
 Linker generated symbols:
