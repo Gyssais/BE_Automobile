@@ -138,3 +138,17 @@ int analogRead(int pin)
 	
 }
 
+
+void adc_example()
+{
+	int result;
+	
+	result = setupAdc();
+	result =  setupPin(AD_PIN);
+	enableADC();
+	
+	while(1)
+	{
+		result = analogRead(AD_PIN);
+	}
+}

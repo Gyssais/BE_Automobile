@@ -15,4 +15,6 @@ void enableADC();
 void startConversion();
 int analogRead(int pin);
 
+void  adc_example();
+
 #endif /* ADC_H_ */
