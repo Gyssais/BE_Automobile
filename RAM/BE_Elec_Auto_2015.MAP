@@ -48,7 +48,7 @@ Link map of __startup
     3] .init (section,local) found in MPC5604B_Startup_c.obj 
     3] .init.21 (notype,local) found in MPC5604B_Startup_c.obj 
     3] .text (section,local) found in main_c.obj 
-    3] .text.34 (notype,local) found in main_c.obj 
+    3] .text.160 (notype,local) found in main_c.obj 
     3] .ivor_branch_table (section,local) found in ivor_branch_table_c.obj 
     3] .ivor_branch_table.24 (notype,local) found in ivor_branch_table_c.obj 
     3] .text (section,local) found in adc_c.obj 
@@ -150,7 +150,7 @@ Link map of __startup
   00000052 000042 40001382 000005b2  1 .text 	main_c.obj 
   00000052 000030 40001382 000005b2  2 adc_example 	main_c.obj 
   00000082 000012 400013b2 000005e2  2 main 	main_c.obj 
-  00000094 000000 400013c4 000005f4  1 .text.34 	main_c.obj 
+  00000094 000000 400013c4 000005f4  1 .text.160 	main_c.obj 
   00000094 000000 400013c4 000005f4  1 .text 	spi_drv_c.obj 
   UNUSED   000026 ........ ........    _spi_drv_init_dspi0 spi_drv_c.obj 
   UNUSED   000020 ........ ........    _spi_drv_exchange_dspi0 spi_drv_c.obj 
@@ -463,12 +463,12 @@ Memory map:
                .sdata2 40001ad4 00000000 000009b0          0
                 .sbss2 40001ad4 00000000 000009b0          0
                   .bss 40001ad4 00000000 000009b0          0
-      .PPC.EMB.apuinfo 000055fc 00000000 00005fb0          0
+      .PPC.EMB.apuinfo 00005658 00000000 00006010          0
          .debug_abbrev          0000015d 000009b0
            .debug_info          000018e7 00000b0d
-           .debug_line          000029d2 000023f4
-            .debug_loc          000003f7 00004dc6
-       .debug_pubnames          0000038f 000051bd
+           .debug_line          00002a2d 000023f4
+            .debug_loc          000003f7 00004e21
+       .debug_pubnames          0000038f 00005218
 
 
 Linker generated symbols:

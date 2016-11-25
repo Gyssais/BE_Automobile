@@ -22,4 +22,11 @@ Sources/application/main_c.obj: C:\Users\Julien\Documents\INSA\5A\BE\ elec\ auto
 	C:\Users\Julien\Documents\INSA\5A\BE\ elec\ automobile\BE_Elec_Auto_2015\Project_Headers\DCM_appli.h \
 	C:\Users\Julien\Documents\INSA\5A\BE\ elec\ automobile\BE_Elec_Auto_2015\Project_Headers\pin.h \
 	C:\Users\Julien\Documents\INSA\5A\BE\ elec\ automobile\BE_Elec_Auto_2015\Project_Headers\adc.h \
-	C:\Users\Julien\Documents\INSA\5A\BE\ elec\ automobile\BE_Elec_Auto_2015\Project_Headers\define.h 
+	C:\Users\Julien\Documents\INSA\5A\BE\ elec\ automobile\BE_Elec_Auto_2015\Project_Headers\define.h \
+	C:\Users\Julien\Documents\INSA\5A\BE\ elec\ automobile\BE_Elec_Auto_2015\Project_Headers\spi_drv.h \
+	C:\Freescale\CW\ MCU\ v10.7\MCU\PA_Support\ewl\EWL_C\include\string.h \
+	C:\Freescale\CW\ MCU\ v10.7\MCU\PA_Support\ewl\EWL_C\include\cstring \
+	C:\Freescale\CW\ MCU\ v10.7\MCU\PA_Support\ewl\EWL_C\include\null.h \
+	C:\Freescale\CW\ MCU\ v10.7\MCU\PA_Support\ewl\EWL_C\include\size_t.h \
+	C:\Freescale\CW\ MCU\ v10.7\MCU\PA_Support\ewl\EWL_C\include\ewl_rsize_t.h \
+	C:\Freescale\CW\ MCU\ v10.7\MCU\PA_Support\ewl\EWL_C\include\string_api.h 
