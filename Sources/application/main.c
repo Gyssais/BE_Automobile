@@ -12,11 +12,9 @@
 #include "define.h"
 #include "spi_drv.h"
 
-
-
 /*************** Private function prototype **********/
 
-//************** Public function *************/
+/*************** Public function            **********/
 
 
 // configure the adc, configure the pin AD_PIN for analog input, and perform continuously a software triggered conversion.
@@ -36,9 +34,42 @@ void adc_example()
 
  int main(void) {
 
+<<<<<<< HEAD
+	 disableWatchdog();
+	 initModesAndClock();
+	 
+	 /*
+	 SIU.PCR[68].R = 0x0200;// LED EN Sortie
+	 SIU.PCR[69].R = 0x0200;
+	 SIU.PCR[70].R = 0x0200;
+	 SIU.PCR[65].R = 0x0100; // S2 en entree
+	 SIU.PCR[64].R = 0x0100;
+	 SIU.PCR[66].R = 0x0100;
+	 while(1) {
+		 if(SIU.GPDI[65].B.PDI == 1) {
+			SIU.GPDO[68].R = 1; 
+		 }
+		 else SIU.GPDO[68].R = 0;
+		 
+		 if(SIU.GPDI[66].B.PDI == 1){
+			 SIU.GPDO[70].R= 1;}
+		 else SIU.GPDO[70].R = 0;
+		 
+		 if(SIU.GPDI[64].B.PDI == 1)
+			 
+		 {   SIU.GPDO[69].R = 1;
+		 }
+			else SIU.GPDO[69].R = 0;
+		
+	 }   */
+=======
 	 adc_example(); // To test
 
+>>>>>>> 1c5b992d6b90bff314774a809094c1a30576de73
 }
+	 
+				
+
 
 
 

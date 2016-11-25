@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+Sources/application/BCM_appli_old_c.obj: C:\Users\Gido\OneDrive\INSA\5ESE\Automobile\Code_Git_Initial\BE_Automobile\Sources\application\BCM_appli_old.c \
+	C:\Freescale\CW\ MCU\ v10.7\MCU\PA_Support\ewl\EWL_C\include\lib_ewl.prefix \
+	C:\Freescale\CW\ MCU\ v10.7\MCU\PA_Support\ewl\EWL_C\include\common.prefix \
+	C:\Freescale\CW\ MCU\ v10.7\MCU\PA_Support\ewl\EWL_C\include\ewl_c_version.h \
+	C:\Users\Gido\OneDrive\INSA\5ESE\Automobile\Code_Git_Initial\BE_Automobile\Prefix\MPC5604B_RAM_VLE.prefix \
+	C:\Users\Gido\OneDrive\INSA\5ESE\Automobile\Code_Git_Initial\BE_Automobile\Project_Headers\MPC5604B.h \
+	C:\Users\Gido\OneDrive\INSA\5ESE\Automobile\Code_Git_Initial\BE_Automobile\Project_Headers\typedefs.h \
+=======
 Sources/application/BCM_appli_old_c.obj: C:\Users\Julien\Documents\INSA\5A\BE\ elec\ automobile\BE_Elec_Auto_2015\Sources\application\BCM_appli_old.c \
 	C:\Freescale\CW\ MCU\ v10.7\MCU\PA_Support\ewl\EWL_C\include\lib_ewl.prefix \
 	C:\Freescale\CW\ MCU\ v10.7\MCU\PA_Support\ewl\EWL_C\include\common.prefix \
@@ -5,6 +14,7 @@ Sources/application/BCM_appli_old_c.obj: C:\Users\Julien\Documents\INSA\5A\BE\ e
 	C:\Users\Julien\Documents\INSA\5A\BE\ elec\ automobile\BE_Elec_Auto_2015\Prefix\MPC5604B_RAM_VLE.prefix \
 	C:\Users\Julien\Documents\INSA\5A\BE\ elec\ automobile\BE_Elec_Auto_2015\Project_Headers\MPC5604B.h \
 	C:\Users\Julien\Documents\INSA\5A\BE\ elec\ automobile\BE_Elec_Auto_2015\Project_Headers\typedefs.h \
+>>>>>>> 1c5b992d6b90bff314774a809094c1a30576de73
 	C:\Freescale\CW\ MCU\ v10.7\MCU\PA_Support\ewl\EWL_C\include\stdint.h \
 	C:\Freescale\CW\ MCU\ v10.7\MCU\PA_Support\ewl\EWL_C\include\ansi_parms.h \
 	C:\Freescale\CW\ MCU\ v10.7\MCU\PA_Support\ewl\EWL_C\include\ewlGlobals.h \
@@ -13,6 +23,15 @@ Sources/application/BCM_appli_old_c.obj: C:\Users\Julien\Documents\INSA\5A\BE\ e
 	C:\Freescale\CW\ MCU\ v10.7\MCU\PA_Support\ewl\EWL_C\include\cstdint \
 	C:\Freescale\CW\ MCU\ v10.7\MCU\PA_Support\ewl\EWL_C\include\limits_api.h \
 	C:\Freescale\CW\ MCU\ v10.7\MCU\PA_Support\ewl\EWL_C\include\ewl_lib_ext1.h \
+<<<<<<< HEAD
+	C:\Users\Gido\OneDrive\INSA\5ESE\Automobile\Code_Git_Initial\BE_Automobile\Project_Headers\IntcInterrupts.h \
+	C:\Users\Gido\OneDrive\INSA\5ESE\Automobile\Code_Git_Initial\BE_Automobile\Project_Headers\config.h \
+	C:\Users\Gido\OneDrive\INSA\5ESE\Automobile\Code_Git_Initial\BE_Automobile\Project_Headers\BCM_appli.h \
+	C:\Users\Gido\OneDrive\INSA\5ESE\Automobile\Code_Git_Initial\BE_Automobile\Project_Headers\LCM_appli.h \
+	C:\Users\Gido\OneDrive\INSA\5ESE\Automobile\Code_Git_Initial\BE_Automobile\Project_Headers\Comodo.h \
+	C:\Users\Gido\OneDrive\INSA\5ESE\Automobile\Code_Git_Initial\BE_Automobile\Project_Headers\SBC.h \
+	C:\Users\Gido\OneDrive\INSA\5ESE\Automobile\Code_Git_Initial\BE_Automobile\Project_Headers\Mode_manager.h 
+=======
 	C:\Users\Julien\Documents\INSA\5A\BE\ elec\ automobile\BE_Elec_Auto_2015\Project_Headers\IntcInterrupts.h \
 	C:\Users\Julien\Documents\INSA\5A\BE\ elec\ automobile\BE_Elec_Auto_2015\Project_Headers\config.h \
 	C:\Users\Julien\Documents\INSA\5A\BE\ elec\ automobile\BE_Elec_Auto_2015\Project_Headers\BCM_appli.h \
@@ -20,3 +39,4 @@ Sources/application/BCM_appli_old_c.obj: C:\Users\Julien\Documents\INSA\5A\BE\ e
 	C:\Users\Julien\Documents\INSA\5A\BE\ elec\ automobile\BE_Elec_Auto_2015\Project_Headers\Comodo.h \
 	C:\Users\Julien\Documents\INSA\5A\BE\ elec\ automobile\BE_Elec_Auto_2015\Project_Headers\SBC.h \
 	C:\Users\Julien\Documents\INSA\5A\BE\ elec\ automobile\BE_Elec_Auto_2015\Project_Headers\Mode_manager.h 
+>>>>>>> 1c5b992d6b90bff314774a809094c1a30576de73
