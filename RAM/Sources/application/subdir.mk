@@ -9,42 +9,49 @@ C_SRCS_QUOTED += \
 "../Sources/application/BCM_appli.c" \
 "../Sources/application/BCM_appli_old.c" \
 "../Sources/application/LCM_appli_old.c" \
+"../Sources/application/global.c" \
 "../Sources/application/main.c" \
 
 C_SRCS += \
 ../Sources/application/BCM_appli.c \
 ../Sources/application/BCM_appli_old.c \
 ../Sources/application/LCM_appli_old.c \
+../Sources/application/global.c \
 ../Sources/application/main.c \
 
 OBJS += \
 ./Sources/application/BCM_appli_c.obj \
 ./Sources/application/BCM_appli_old_c.obj \
 ./Sources/application/LCM_appli_old_c.obj \
+./Sources/application/global_c.obj \
 ./Sources/application/main_c.obj \
 
 OBJS_QUOTED += \
 "./Sources/application/BCM_appli_c.obj" \
 "./Sources/application/BCM_appli_old_c.obj" \
 "./Sources/application/LCM_appli_old_c.obj" \
+"./Sources/application/global_c.obj" \
 "./Sources/application/main_c.obj" \
 
 C_DEPS += \
 ./Sources/application/BCM_appli_c.d \
 ./Sources/application/BCM_appli_old_c.d \
 ./Sources/application/LCM_appli_old_c.d \
+./Sources/application/global_c.d \
 ./Sources/application/main_c.d \
 
 OBJS_OS_FORMAT += \
 ./Sources/application/BCM_appli_c.obj \
 ./Sources/application/BCM_appli_old_c.obj \
 ./Sources/application/LCM_appli_old_c.obj \
+./Sources/application/global_c.obj \
 ./Sources/application/main_c.obj \
 
 C_DEPS_QUOTED += \
 "./Sources/application/BCM_appli_c.d" \
 "./Sources/application/BCM_appli_old_c.d" \
 "./Sources/application/LCM_appli_old_c.d" \
+"./Sources/application/global_c.d" \
 "./Sources/application/main_c.d" \
 
 
@@ -78,9 +85,17 @@ Sources/application/LCM_appli_old_c.obj: ../Sources/application/LCM_appli_old.c
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Sources/application/main_c.obj: ../Sources/application/main.c
+Sources/application/global_c.obj: ../Sources/application/global.c
 	@echo 'Building file: $<'
 	@echo 'Executing target #15 $<'
+	@echo 'Invoking: PowerPC Compiler'
+	"$(PAToolsDirEnv)/mwcceppc" @@"Sources/application/global.args" -o "Sources/application/global_c.obj" "$<" -MD -gccdep
+	@echo 'Finished building: $<'
+	@echo ' '
+
+Sources/application/main_c.obj: ../Sources/application/main.c
+	@echo 'Building file: $<'
+	@echo 'Executing target #16 $<'
 	@echo 'Invoking: PowerPC Compiler'
 	"$(PAToolsDirEnv)/mwcceppc" @@"Sources/application/main.args" -o "Sources/application/main_c.obj" "$<" -MD -gccdep
 	@echo 'Finished building: $<'

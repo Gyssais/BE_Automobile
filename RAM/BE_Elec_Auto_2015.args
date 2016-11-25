@@ -5,6 +5,7 @@
 "./Project_Settings/Startup_Code/MPC5604B_Startup_c.obj"
 "./Project_Settings/Startup_Code/MPC5604B_HWInit_c.obj"
 "./Sources/application/main_c.obj"
+"./Sources/application/global_c.obj"
 "./Sources/application/LCM_appli_old_c.obj"
 "./Sources/application/BCM_appli_old_c.obj"
 "./Sources/application/BCM_appli_c.obj"
