@@ -272,10 +272,10 @@ int main(void) {
 /**Port definition for DSPI1, alternatives are\n
  * \code
  *#define DSPI1_PORT 'E'
- *#define DSPI1_PORT 'H' 
+ *#define DSPI1_PORT 'C' 
  *\endcode
 */
-#define DSPI1_PORT 'C'
+#define DSPI1_PORT 'H'
 /**Port definition for DSPI2, alternative is\n
  *\code
  *#define DSPI2_PORT 'C'

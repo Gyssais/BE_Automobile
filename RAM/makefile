@@ -2,7 +2,7 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-#Progress monitor hint: 18
+#Progress monitor hint: 21
 first : all
 -include ../makefile.init
 
@@ -18,6 +18,7 @@ RM := "$(GNU_Make_Install_DirEnv)/rm" -f
 -include Sources/driver/subdir.mk
 -include Sources/application/subdir.mk
 -include Project_Settings/Startup_Code/subdir.mk
+-include .metadata/.plugins/org.eclipse.cdt.make.core/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -75,7 +76,7 @@ all: warning-messages explicit-dependencies BE_Elec_Auto_2015.elf
 # Tool invocations
 BE_Elec_Auto_2015.elf: $(OBJS) $(USER_OBJS) ../Project_Settings/Linker_Files/MPC5604B_RAM.lcf
 	@echo 'Building target: $@'
-	@echo 'Executing target #19 $@'
+	@echo 'Executing target #22 $@'
 	@echo 'Invoking: PowerPC Linker'
 	"$(PAToolsDirEnv)/mwldeppc" -o "BE_Elec_Auto_2015.elf" @@"BE_Elec_Auto_2015.args"  $(USER_OBJS_QUOTED)
 	@echo 'Finished building target: $@'
@@ -83,7 +84,7 @@ BE_Elec_Auto_2015.elf: $(OBJS) $(USER_OBJS) ../Project_Settings/Linker_Files/MPC
 
 # Other Targets
 clean:
-	-$(RM) $(S_DEPS_QUOTED) $(STATICLIB_QUOTED) "./*/*/*.obj"  $(CPP_DEPS_QUOTED) $(CC_DEPS_QUOTED) $(S_UPPER_DEPS_QUOTED) $(CXX_DEPS_QUOTED) $(ASM_DEPS_QUOTED) $(ASM_UPPER_DEPS_QUOTED) $(C_UPPER_DEPS_QUOTED) $(C++_DEPS_QUOTED) $(EXECUTABLES_QUOTED) "./*/*/*.d"  $(ProjDirPath)/RAM/BE_Elec_Auto_2015.elf
+	-$(RM) $(S_DEPS_QUOTED) $(STATICLIB_QUOTED) "./*/*/*/*.obj" "./*/*/*.obj"  "./*/*/*/*.d"  $(CC_DEPS_QUOTED) $(S_UPPER_DEPS_QUOTED) $(CXX_DEPS_QUOTED) $(ASM_DEPS_QUOTED) $(ASM_UPPER_DEPS_QUOTED) $(C_UPPER_DEPS_QUOTED) $(C++_DEPS_QUOTED) $(EXECUTABLES_QUOTED) "./*/*/*/*.d" "./*/*/*.d"  $(ProjDirPath)/RAM/BE_Elec_Auto_2015.elf
 	-@echo ' '
 
 .PHONY: all clean dependents explicit-dependencies warning-messages

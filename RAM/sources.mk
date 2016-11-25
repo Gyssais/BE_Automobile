@@ -90,4 +90,5 @@ Sources/service \
 Sources/driver \
 Sources/application \
 Project_Settings/Startup_Code \
+.metadata/.plugins/org.eclipse.cdt.make.core \
 

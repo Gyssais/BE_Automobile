@@ -51,7 +51,7 @@ C_DEPS_QUOTED += \
 # Each subdirectory must supply rules for building sources it contributes
 Sources/application/BCM_appli_c.obj: ../Sources/application/BCM_appli.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #11 $<'
+	@echo 'Executing target #12 $<'
 	@echo 'Invoking: PowerPC Compiler'
 	"$(PAToolsDirEnv)/mwcceppc" @@"Sources/application/BCM_appli.args" -o "Sources/application/BCM_appli_c.obj" "$<" -MD -gccdep
 	@echo 'Finished building: $<'
@@ -64,7 +64,7 @@ Sources/application/%.d: ../Sources/application/%.c
 
 Sources/application/BCM_appli_old_c.obj: ../Sources/application/BCM_appli_old.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #12 $<'
+	@echo 'Executing target #13 $<'
 	@echo 'Invoking: PowerPC Compiler'
 	"$(PAToolsDirEnv)/mwcceppc" @@"Sources/application/BCM_appli_old.args" -o "Sources/application/BCM_appli_old_c.obj" "$<" -MD -gccdep
 	@echo 'Finished building: $<'
@@ -72,7 +72,7 @@ Sources/application/BCM_appli_old_c.obj: ../Sources/application/BCM_appli_old.c
 
 Sources/application/LCM_appli_old_c.obj: ../Sources/application/LCM_appli_old.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #13 $<'
+	@echo 'Executing target #14 $<'
 	@echo 'Invoking: PowerPC Compiler'
 	"$(PAToolsDirEnv)/mwcceppc" @@"Sources/application/LCM_appli_old.args" -o "Sources/application/LCM_appli_old_c.obj" "$<" -MD -gccdep
 	@echo 'Finished building: $<'
@@ -80,7 +80,7 @@ Sources/application/LCM_appli_old_c.obj: ../Sources/application/LCM_appli_old.c
 
 Sources/application/main_c.obj: ../Sources/application/main.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #14 $<'
+	@echo 'Executing target #15 $<'
 	@echo 'Invoking: PowerPC Compiler'
 	"$(PAToolsDirEnv)/mwcceppc" @@"Sources/application/main.args" -o "Sources/application/main_c.obj" "$<" -MD -gccdep
 	@echo 'Finished building: $<'

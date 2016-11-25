@@ -1,3 +1,5 @@
+"./.metadata/.plugins/org.eclipse.cdt.make.core/specs_cpp.obj"
+"./.metadata/.plugins/org.eclipse.cdt.make.core/specs_c.obj"
 "./Project_Settings/Startup_Code/__ppc_eabi_init_c.obj"
 "./Project_Settings/Startup_Code/MPC5604B_init_ram_c.obj"
 "./Project_Settings/Startup_Code/MPC5604B_Startup_c.obj"
@@ -9,6 +11,7 @@
 "./Sources/driver/spi_drv_c.obj"
 "./Sources/driver/mc33984_drv_c.obj"
 "./Sources/driver/ivor_branch_table_c.obj"
+"./Sources/driver/adc_c.obj"
 "./Sources/driver/IntcInterrupts_c.obj"
 "./Sources/driver/Exceptions_c.obj"
 "./Sources/service/SBC_c.obj"
