@@ -79,7 +79,7 @@ void Turn_off_ADC(void){
 
 
 
-void config_pad_B5(void) 
+void config_pad_B5(void)
 {
 	SIU.PCR[21].R = 0x2000; // Config APC => analog pad input
 }

@@ -9,33 +9,35 @@
 #include "DCM_appli.h"
 #include "pin.h"
 #include "adc.h"
-
-#define AD_PIN PB_4
+#include "define.h"
+#include "spi_drv.h"
 
 /*************** Private function prototype **********/
 
-//************** Public function *************/
+/*************** Public function            **********/
 
-
-// configure the adc, configure the pin AD_PIN for analog input, and perform continuously a software triggered conversion.
-void adc_example()
-{
-	int result;
-	
-	result = setupAdc();
-	result =  setupPin(AD_PIN);
-	enableADC();
-	
-	while(1)
-	{
-		result = analogRead(AD_PIN);
-	}
-}
+uint16_t RxData[128];
 
  int main(void) {
 
+	 // INITIALISATIONS
+	 disableWatchdog();
+	 initModesAndClock();
+	 initialise_SPI_DRIVER(); // Initialise l'utilisation de SPI[i].fonctionnalite
+	 enableIrq();
+	 
+	 // CODE SPI
+	 SPI[1].init(SPI_BAUD_100000, SPI_DELAY_DEFAULT);
+	 //SPI[1].write_array((uint16_t*)"Hello!\0",4,1);
+	 
+	 Init_SBC_DBG();
+
+	 while (1) {}
 
 }
+	 
+				
+
 
 
 

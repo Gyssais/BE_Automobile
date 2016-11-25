@@ -42,7 +42,7 @@ int pinToAdcChannel(int pin, char * channel, char *type)
 	 // precision channels
 	  if(pin >= PB_4 && pin <=PB_7) 
 		  {
-		  *channel = pin-PB_4;
+		  *channel = (char) pin-PB_4; // ajout de (char) pour éviter un warning. 
 		  *type = 0;
 		  return 0;
 		  }

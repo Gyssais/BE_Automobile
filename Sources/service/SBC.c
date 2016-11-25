@@ -26,20 +26,6 @@ uint16_t Read_voltage_value(void){
 	return 0;
 }
 
-void initDSPI_1(void)
-{
-	DSPI_1.MCR.R = 0x80010001;		/* Set Master Mode, CS select at LOW, HALT=1			*/   
-	DSPI_1.CTAR[0].R = 0x78024424;	/* Set timing: Tcsc=Tasc=4µs, Tdt= 1µs, BR=100kbits/s 	*/
-  
- 	DSPI_1.MCR.B.HALT = 0x0;	    /* Exit HALT mode: go from STOPPED to RUNNING state		*/
- 	
- 	SIU.PCR[113].R = 0x0A04;        /* MPC56xxB: Config pad as DSPI_0 SOUT output - PH1		*/
- 	SIU.PCR[112].R = 0x0103;        /* MPC56xxB: Config pad as DSPI_0 SIN input - PH0 		*/
- 		SIU.PSMI[8].R = 2;          /* MPC56xxB: Select PCR 112 for DSPI_1 SIN input 		*/
- 	SIU.PCR[114].R = 0x0A04;        /* MPC56xxB: Config pad as DSPI_0 SCK output - PH2 		*/
- 	SIU.PCR[115].R = 0x0A04;        /* MPC56xxB: Config pad as DSPI_0 PCS0 output - PH3 	*/
-}
-
 //FlexCAN1 initialisation
 	void initCAN1 (void) {
 	uint8_t   i;
@@ -75,44 +61,42 @@ void initDSPI_1(void)
 	CAN_1.MCR.R = 0x00000007;       /* Negate FlexCAN1 halt state for the 8 first message buffers */
 }
 	
-void ReadDataDSPI_1(void) {
-	while (DSPI_1.SR.B.RFDF != 1){} /* Wait for Receive FIFO Drain Flag = 1 				*/
-  	DSPI_1.POPR.R; 					/* Read data received by slave SPI 						*/
-  	DSPI_1.SR.R = 0x80020000;       /* Clear TCF, RDRF flags by writing 1 to them 			*/
-}
 void Init_SBC_DBG(void) 			/* Send SPI commands for activating CAN Transciever		*/
 {
 	
 	vuint32_t i;
-	
-	initDSPI_1();
+	uint16_t TData;
+	uint16_t RData;
+	//initDSPI_1();
 	initCAN1();
 	
-  	DSPI_1.PUSHR.R = 0x0001DF80; 
-    ReadDataDSPI_1();            	/* A dummy read after each command						*/
-  	for (i=0; i<200; i++) {}		/* Wait a while for operations to be completed			*/
-  	
-  	DSPI_1.PUSHR.R = 0x00015A00; 
-    ReadDataDSPI_1();				            
-  	for (i=0; i<200; i++) {}
-
-  	DSPI_1.PUSHR.R = 0x00015E90; 
-    ReadDataDSPI_1();            
-  	for (i=0; i<200; i++) {}
-  	
-  	DSPI_1.PUSHR.R = 0x000160C0; 
-    ReadDataDSPI_1();            
-  	for (i=0; i<200; i++) {}	
-  	
-  	DSPI_1.PUSHR.R = 0x00021800; 
-    ReadDataDSPI_1();            
-  	for (i=0; i<200; i++) {}	
+	// Demande ID produit
+	TData = 0x2580;
+	SPI[1].write(&TData);
+	for (i=0; i<200; i++) {}		/* Wait a while for operations to be completed			*/
+	
+	SPI[1].read(&RData);
+			
+	TData = 0xDF80;
+	SPI[1].write(&TData);
+	for (i=0; i<200; i++) {}		/* Wait a while for operations to be completed			*/
+	
+	TData = 0x5A00;
+	SPI[1].write(&TData);
+	for (i=0; i<200; i++) {}		/* Wait a while for operations to be completed			*/
+	
+	TData = 0x5E90;
+	SPI[1].write(&TData);
+	for (i=0; i<200; i++) {}		/* Wait a while for operations to be completed			*/
+	
+	TData = 0x60C0;
+	SPI[1].write(&TData);
+	for (i=0; i<200; i++) {}		/* Wait a while for operations to be completed			*/
+	
+	TData = 0x1800;
+	SPI[1].write(&TData);
+	for (i=0; i<200; i++) {}		/* Wait a while for operations to be completed			*/
 }
-
-
-
-
-
 
 void TransmitMsg(uint8_t * TxData, uint8_t length, uint16_t MsgID) {
 	uint8_t	i;
