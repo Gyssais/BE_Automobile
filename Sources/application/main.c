@@ -10,6 +10,7 @@
 #include "pin.h"
 #include "adc.h"
 #include "define.h"
+#include "spi_drv.h"
 
 
 
