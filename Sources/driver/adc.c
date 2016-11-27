@@ -9,6 +9,7 @@
 #include "pin.h"
 #include "MPC5604B.h"
 
+
 int setupAdc()
 {
 	if(ADC.MSR.B.ADCSTATUS !=1) // if not in power-down mode
@@ -73,7 +74,7 @@ int pinToAdcChannel(int pin, char * channel, char *type)
 		  return 0;
 		  }
 	
-	  else return -1;
+	  else return WRONG_PIN;
 }
 
 void enableADC()
@@ -96,7 +97,6 @@ int setupPin(int pin)
 			while(ADC.MSR.B.ADCSTATUS != 1) {} // wait to be in power-down mode.
 		}
 	
-	  SIU.PCR[pin].R = 0x2000; // pin  in analog mode 
 	  
 	  // enable channel corresponding to the pin for normal conversion.
 	  
@@ -109,8 +109,9 @@ int setupPin(int pin)
 	  else if (pin >= PD_12 && pin <=PD_15) ADC.NCMR[1].R |= (1<<(pin-PD_12));
 	  else if (pin >= PF_0 && pin <=PF_7) ADC.NCMR[1].R |= (1<<(pin-PF_0));
 	
-	  else return -1;
+	  else return WRONG_PIN;
 	  
+	  SIU.PCR[pin].R = 0x2000; // pin  in analog mode 
 	  return 0;
 }
 
@@ -120,8 +121,8 @@ int analogRead(int pin)
 	char channel;
 	char channel_type;
 	 
-	if(pinToAdcChannel(pin,&channel, &channel_type) !=0 ) return -1; // check if the pin corresponds to a valid channel
-	if(!(ADC.NCMR[channel_type].R & (1<<channel)))  return -2; // check if the channel is enabled in the NCMR register.
+	if(pinToAdcChannel(pin,&channel, &channel_type) !=0 ) return WRONG_PIN; // check if the pin corresponds to a valid channel
+	if(!(ADC.NCMR[channel_type].R & (1<<channel)))  return CHANNEL_DISABLED; // check if the channel is enabled in the NCMR register.
 	
 	
 	ADC.MCR.B.NSTART =1;
@@ -133,9 +134,39 @@ int analogRead(int pin)
 	{
 		return ADC.CDR[channel].B.CDATA;
 	}
-	else return -3;
+	else return UNVALID_DATA;
+		
+}
+
+ 
+//TODO  interrupt setup
+int setupAnalogWatchdog(int pin, int high_threshold, int low_threshold, int watchdog)
+{
+	char channel;
+	char channel_type;
 	
+	/* check all the arguments */
+	if(pinToAdcChannel(pin,&channel, &channel_type) !=0 ) return WRONG_PIN; // check if the pin corresponds to a valid channel
+	if(watchdog <0 || watchdog > 3) return WRONG_WATCHDOG;	
 	
+	if(high_threshold > ADC_MAX) high_threshold = ADC_MAX;
+	if(low_threshold < ADC_MIN) low_threshold = ADC_MIN;
+	
+	TRC[watchdog].B.THRCH = channel; // set the channel
+	THRHLR[watchdog].B.THRH = high_threshold; // set the threshold
+	THRHLR[watchdog].B.THRL = low_threshold;
+	
+	return 0;	
+}
+
+void startAnalogWatchdog(int watchdog)
+{
+	TRC[watchdog].B.THREN = 1;
+}
+
+void stopAnalogWatchdog(int watchdog)
+{
+	TRC[watchdog].B.THREN = 0;
 }
 
 
